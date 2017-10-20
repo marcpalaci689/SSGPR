@@ -262,7 +262,7 @@ class SSGPR:
         # set up the range of the plot
         x_max   = np.max(self.x_train)
         x_min   = np.min(self.x_train)
-        padding = (x_max-x_min)*0.1
+        padding = (x_max-x_min)*0.15
         
         x = np.linspace(x_min-padding,x_max+padding,1000).reshape(-1,1)
         
@@ -278,6 +278,7 @@ class SSGPR:
         plt.xlabel('X',fontsize=20)
         plt.ylabel('Y',fontsize=20)
         plt.legend()
+        plt.show()
         return
         
         
